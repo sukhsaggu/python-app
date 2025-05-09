@@ -27,4 +27,4 @@ jobs:
         with:
           # context: .
           push: true
-          tags: sukhsaggu2020/python-app: ${ GITHUB_SHA }
+          tags: sukhsaggu2020/python-app:${{ github.sha }}
