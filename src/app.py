@@ -13,7 +13,7 @@ def details():
         'description': 'A simple Flask API',
         'time': datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         'hostname': socket.gethostname(),
-        'message': 'Hello, World!!'
+        'message': 'Hello, World!!!'
 
     })
 

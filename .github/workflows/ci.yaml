@@ -11,6 +11,12 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
+      - name: Shorten SHA
+        shell: bash
+        run: |
+          echo "COMMIT_ID=$(echo $GITHUB_SHA::6"} >> "$GITHUB_ENV"
+      
+      
       -
         name: Checkout
         uses: actions/checkout@v4
@@ -27,4 +33,4 @@ jobs:
         with:
           # context: .
           push: true
-          tags: sukhsaggu2020/python-app:${{ github.sha }}
+          tags: sukhsaggu2020/python-app:${{ env.COMMIT_ID }}
