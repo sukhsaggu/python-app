@@ -33,7 +33,7 @@ jobs:
           push: true
           tags: sukhsaggu2020/python-app:${{ env.COMMIT_ID }}
 
-    output:
+    outputs:
       commit_id: ${{ env.COMMIT_ID }}
   
   cd:
